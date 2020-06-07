@@ -25,6 +25,21 @@ MQTT Proxy allows MQTT clients to send messages to other messaging systems
     * [ ] Others
 * [x] Helm chart
 
+### Install binary release
+
+1. Download the latest Linux release
+
+    ```
+    TAG=$(curl --silent "https://api.github.com/repos/grepplabs/mqtt-proxy/releases/latest" | jq -r '.tag_name')
+    curl -Ls https://github.com/grepplabs/mqtt-proxy/releases/download/${TAG}/mqtt-proxy-${TAG}-linux-amd64.tar.gz | tar xz
+    ```
+
+2. Move the binary in to your PATH.
+
+    ```
+    sudo mv ./mqtt-proxy /usr/local/bin/mqtt-proxy
+    ```
+
 ## Build
 ### build binary
 
